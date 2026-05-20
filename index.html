@@ -4,195 +4,1009 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIC Leadership Playbook</title>
+<link rel="preconnect" href=https://fonts.googleapis.com>
+<link href=https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap rel="stylesheet">
 <style>
-   body {
-       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-       margin: 0;
-       background-color: #f7f9fb;
-       color: #1a1a1a;
-       line-height: 1.6;
-   }
-   header {
-       background: linear-gradient(135deg, #002b5c, #0072ce);
-       color: white;
-       padding: 60px 20px;
-       text-align: center;
-   }
-   header h1 {
-       margin: 0;
-       font-size: 36px;
-   }
-   header p {
-       font-size: 18px;
-       opacity: 0.9;
-   }
-   section {
-       max-width: 900px;
-       margin: 40px auto;
-       padding: 0 20px;
-   }
-   h2 {
-       color: #002b5c;
-       border-bottom: 2px solid #e0e6ed;
-       padding-bottom: 5px;
-   }
-   .card {
-       background: white;
-       padding: 20px;
-       border-radius: 10px;
-       margin: 20px 0;
-       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-   }
-   .tag {
-       display: inline-block;
-       background: #e6f0fa;
-       color: #002b5c;
-       padding: 4px 10px;
-       border-radius: 20px;
-       font-size: 12px;
-       margin-right: 5px;
-   }
-   .script {
-       background: #f1f5f9;
-       padding: 15px;
-       border-left: 4px solid #0072ce;
-       margin-top: 10px;
-       font-style: italic;
-   }
-   .checklist li {
-       margin-bottom: 8px;
-   }
+  :root {
+    --navy: #0b1f3a;
+    --blue: #1055a8;
+    --accent: #e8c84a;
+    --light-bg: #f4f6f9;
+    --white: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7a99;
+    --border: #dce3ef;
+    --card-shadow: 0 2px 20px rgba(11, 31, 58, 0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light-bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 24px 70px;
+    text-align: center;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(16, 85, 168, 0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 110%, rgba(16, 85, 168, 0.35) 0%, transparent 60%);
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 60px;
+    background: var(--light-bg);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .header-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+  .header-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232, 200, 74, 0.15);
+    border: 1px solid rgba(232, 200, 74, 0.35);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  header h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: clamp(28px, 4.5vw, 46px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  header h1 span { color: var(--accent); }
+
+  header p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+    white-space: nowrap;
+  }
+
+  /* ── LAYOUT ── */
+  main { max-width: 860px; margin: 0 auto; padding: 30px 24px 100px; }
+
+  /* ── SECTION HEADINGS ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .section-label h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(220, 227, 239, 0.6);
+  }
+
+  .card p { color: #3d4a66; font-size: 15px; }
+  .card p + p { margin-top: 12px; }
+
+  /* ── PHILOSOPHY CALLOUT ── */
+  .philosophy-block {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(220, 227, 239, 0.6);
+  }
+
+  .philosophy-block::before {
+    display: none;
+  }
+
+  .philosophy-block p {
+    color: #3d4a66;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.75;
+    position: relative;
+    z-index: 1;
+  }
+
+  .philosophy-block p + p { margin-top: 16px; }
+
+  .philosophy-block p strong {
+    font-weight: 700;
+  }
+
+  .philosophy-footer {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px 28px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--accent);
+    font-size: 15px;
+    color: #3d4a66;
+  }
+
+  /* ── CIC TAGS ── */
+  .cic-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .cic-tag {
+    display: inline-block;
+    background: #e8eef7;
+    color: #2d3f5e;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 100px;
+    border: 1px solid #c8d5e8;
+  }
+
+  /* ── SYSTEM INTRO ── */
+  .system-intro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .system-step {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 24px 20px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .system-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(11, 31, 58, 0.12);
+  }
+
+  .system-step::after {
+    content: '→';
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--navy);
+    font-size: 26px;
+    font-weight: 700;
+    z-index: 2;
+  }
+
+  .system-step:last-child::after { display: none; }
+
+  .step-number {
+    width: 38px; height: 38px;
+    background: var(--navy);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 auto 14px;
+  }
+
+  .system-step h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .system-step p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .system-note {
+    background: rgba(16, 85, 168, 0.05);
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--blue);
+    border: 1px solid rgba(16, 85, 168, 0.12);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  /* ── PRACTICE CARDS ── */
+  .practices-timeline {
+    position: relative;
+  }
+
+  .practice-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .practice-wrapper:last-child {
+    margin-bottom: 0;
+  }
+
+  .practice-card {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .practice-card:hover {
+    box-shadow: 0 8px 32px rgba(11, 31, 58, 0.11);
+    transform: translateY(-2px);
+  }
+
+  .practice-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px 32px 16px;
+  }
+
+  .practice-num {
+    flex-shrink: 0;
+    width: 52px; height: 52px;
+    background: var(--navy);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .practice-title-group { flex: 1; }
+
+  .practice-badge {
+    display: inline-block;
+    background: rgba(16, 85, 168, 0.08);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 8px;
+  }
+
+  .practice-title-group h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .practice-lead {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .practice-body {
+    padding: 0 32px 28px;
+  }
+
+  .practice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .practice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: #3d4a66;
+    line-height: 1.6;
+  }
+
+  .practice-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--blue);
+    margin-top: 8px;
+  }
+
+  .practice-example {
+    margin-top: 20px;
+    background: #f1f5fb;
+    border-left: 3px solid var(--blue);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+
+  .practice-example-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+
+  .practice-example p {
+    font-size: 16px;
+    color: #3d4a66;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .example-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .example-list li {
+    font-size: 16px;
+    color: #3d4a66;
+    font-style: italic;
+    line-height: 1.6;
+    padding-left: 14px;
+    border-left: 2px solid rgba(16, 85, 168, 0.2);
+  }
+
+  /* ── REDIRECT STEPS ── */
+  .redirect-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 8px;
+  }
+
+  .redirect-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+  }
+
+  .redirect-dot {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--navy);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+  }
+
+  .redirect-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.4;
+    padding: 0 4px;
+  }
+
+  .redirect-connector {
+    flex-shrink: 0;
+    height: 2px;
+    width: 32px;
+    background: var(--border);
+    margin-top: 6px;
+  }
+
+  /* ── ACCORDIONS ── */
+  .accordion-group { padding: 8px 0; }
+
+  .accordion-item { border-bottom: 1px solid var(--border); }
+  .accordion-item:last-child { border-bottom: none; }
+
+  .accordion-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 12px;
+    transition: background 0.15s ease;
+  }
+
+  .accordion-trigger:hover { background: rgba(11, 31, 58, 0.02); }
+
+  .accordion-trigger span:first-child {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .accordion-icon {
+    width: 26px; height: 26px;
+    flex-shrink: 0;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    color: var(--blue);
+    transition: transform 0.25s ease, background 0.2s ease;
+    line-height: 1;
+  }
+
+  .accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: rotate(45deg);
+    background: var(--navy);
+    color: var(--accent);
+  }
+
+  .accordion-body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    opacity: 0;
+  }
+
+  .accordion-body.open {
+    max-height: 600px;
+    opacity: 1;
+  }
+
+  .accordion-body-inner {
+    padding: 4px 32px 24px;
+    font-size: 14px;
+    color: #3d4a66;
+    line-height: 1.75;
+  }
+
+  .accordion-body-inner ul {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .accordion-body-inner li::marker { color: var(--blue); }
+
+  /* ── BRIDGE ── */
+  .bridge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 28px;
+    margin: 20px 0;
+    background: linear-gradient(to right, rgba(16, 85, 168, 0.06), rgba(16, 85, 168, 0.02));
+    border-radius: 12px;
+    border-left: 3px solid var(--blue);
+  }
+
+  .bridge-arrow {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-size: 14px;
+  }
+
+  .bridge p {
+    font-size: 14px;
+    color: var(--blue);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── CTA ── */
+  .cta-card {
+    background: var(--navy);
+    border-radius: 18px;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 0%, rgba(16, 85, 168, 0.5) 0%, transparent 65%);
+  }
+
+  .cta-card > * { position: relative; z-index: 1; }
+
+  .cta-card h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .cta-card p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.75;
+  }
+
+  .cta-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .cta-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: default;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .cta-pill:hover {
+    background: rgba(232, 200, 74, 0.15);
+    border-color: rgba(232, 200, 74, 0.4);
+    color: var(--accent);
+  }
+
+  /* ── TEAM RITUALS ── */
+  .ritual-accordion-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ritual-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: background 0.15s ease;
+  }
+
+  .ritual-trigger:hover { background: rgba(11, 31, 58, 0.02); }
+
+  .ritual-trigger-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .ritual-icon-sm {
+    font-size: 20px;
+    line-height: 1;
+    width: 28px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .ritual-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .ritual-arrow {
+    width: 26px; height: 26px;
+    flex-shrink: 0;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    color: var(--blue);
+    transition: transform 0.25s ease, background 0.2s ease;
+  }
+
+  .ritual-trigger[aria-expanded="true"] .ritual-arrow {
+    transform: rotate(45deg);
+    background: var(--navy);
+    color: var(--accent);
+  }
+
+  .ritual-body {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  }
+
+  .ritual-body.open {
+    max-height: 600px;
+    opacity: 1;
+  }
+
+  .ritual-body-inner {
+    padding: 4px 28px 24px 62px;
+    font-size: 14px;
+    color: #3d4a66;
+    line-height: 1.75;
+  }
+
+  /* ── SPACING HELPERS ── */
+  .mb-8 { margin-bottom: 8px; }
+  .mb-16 { margin-bottom: 16px; }
+  .mb-40 { margin-bottom: 40px; }
+  .mb-60 { margin-bottom: 60px; }
+
+  /* ── FADE-IN ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.55s ease forwards;
+  }
+
+  .fade-up:nth-child(1) { animation-delay: 0.05s; }
+  .fade-up:nth-child(2) { animation-delay: 0.15s; }
+  .fade-up:nth-child(3) { animation-delay: 0.25s; }
+  .fade-up:nth-child(4) { animation-delay: 0.35s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .system-intro { grid-template-columns: 1fr; }
+    .system-step::after { display: none; }
+    .practice-header { flex-direction: column; }
+    .philosophy-block { padding: 28px 24px; }
+    .cta-card { padding: 36px 24px; }
+    .accordion-trigger, .accordion-body-inner { padding-left: 24px; padding-right: 24px; }
+  }
 </style>
 </head>
 <body>
+
 <header>
-<h1>CIC Leadership Playbook</h1>
-<p>Courageous • Innovative • Collaborative Rituals for Everyday Leadership</p>
+  <div class="header-inner">
+    <h1>CIC <span>Leadership</span> Playbook</h1>
+    <p>Courageous &nbsp;•&nbsp; Innovative &nbsp;•&nbsp; Collaborative Rituals for Everyday Leadership</p>
+  </div>
 </header>
-<section>
-<h2>Purpose</h2>
-<div class="card">
-<p>This playbook helps managers shape the daily employee experience—so work feels clear, meaningful, and energising.</p>
-<p>Grounded in the principles of The One Minute Manager, it focuses on small, consistent actions that build trust, clarity, and performance.</p>
-</div>
-</section>
-<section>
-<h2>Core Philosophy</h2>
-<div class="card">
-<p><strong>Clarity creates confidence.</strong></p>
-<p><strong>Recognition drives energy.</strong></p>
-<p><strong>Feedback builds growth.</strong></p>
-</div>
-</section>
-<section>
-<h2>Daily Rituals</h2>
-<div class="card">
-<span class="tag">Courageous</span>
-<h3>1. One Minute Alignment</h3>
-<p>Start the day ensuring your team knows what success looks like.</p>
-<ul class="checklist">
-<li>What are the top 1–3 priorities today?</li>
-<li>What does “done” look like?</li>
-<li>What might block progress?</li>
-</ul>
-<div class="script">
-           “Today, the most important thing is X. If we achieve Y outcome, we’re in a good place.”
-</div>
-</div>
-<div class="card">
-<span class="tag">Collaborative</span>
-<h3>2. Micro Check-ins</h3>
-<p>Short, informal touchpoints to stay connected.</p>
-<ul class="checklist">
-<li>Ask one meaningful question</li>
-<li>Listen fully</li>
-<li>Remove one blocker</li>
-</ul>
-<div class="script">
-           “What’s one thing slowing you down right now?”
-</div>
-</div>
-<div class="card">
-<span class="tag">Innovative</span>
-<h3>3. Real-Time Recognition</h3>
-<p>Catch people doing things right—immediately.</p>
-<ul class="checklist">
-<li>Be specific</li>
-<li>Tie to impact</li>
-<li>Make it timely</li>
-</ul>
-<div class="script">
-           “The way you handled that stakeholder was clear and calm—that helped move things forward.”
-</div>
-</div>
-</section>
-<section>
-<h2>Weekly Rituals</h2>
-<div class="card">
-<h3>4. One-on-One Conversations</h3>
-<ul class="checklist">
-<li>What’s going well?</li>
-<li>What’s frustrating?</li>
-<li>What support do you need?</li>
-</ul>
-</div>
-<div class="card">
-<h3>5. Constructive Feedback</h3>
-<p>Address issues early, clearly, and respectfully.</p>
-<div class="script">
-           “When X happened, the impact was Y. Let’s align on how we approach this going forward.”
-</div>
-</div>
-</section>
-<section>
-<h2>Monthly Rituals</h2>
-<div class="card">
-<h3>6. Growth Conversations</h3>
-<ul class="checklist">
-<li>Skills to build</li>
-<li>Opportunities to stretch</li>
-<li>Career direction</li>
-</ul>
-</div>
-<div class="card">
-<h3>7. Team Reflection</h3>
-<ul class="checklist">
-<li>What worked?</li>
-<li>What didn’t?</li>
-<li>What will we change?</li>
-</ul>
-</div>
-</section>
-<section>
-<h2>Emotional Experience Map</h2>
-<div class="card">
-<p><strong>Clarity → “I know what matters.”</strong></p>
-<p><strong>Recognition → “I feel valued.”</strong></p>
-<p><strong>Feedback → “I am growing.”</strong></p>
-<p><strong>Connection → “I belong.”</strong></p>
-</div>
-</section>
-<section>
-<h2>Anti-Patterns</h2>
-<div class="card">
-<ul>
-<li>Only giving feedback when things go wrong</li>
-<li>Unclear or shifting priorities</li>
-<li>Delayed recognition</li>
-<li>Avoiding difficult conversations</li>
-</ul>
-</div>
-</section>
-<section>
-<h2>Quick Start Checklist</h2>
-<div class="card">
-<ul class="checklist">
-<li>Set 3 clear priorities daily</li>
-<li>Recognise 1 person per day</li>
-<li>Have 1 meaningful check-in</li>
-<li>Give feedback within 24 hours</li>
-</ul>
-</div>
-</section>
+
+<main>
+
+  <!-- PURPOSE -->
+  <section class="mb-60">
+    <div class="section-label fade-up">
+      <h2>Purpose</h2>
+    </div>
+    <div class="card fade-up">
+      <p>This playbook helps managers shape the daily people experience—so work feels clear, meaningful, and energising. Grounded in the principles of <em>The One Minute Manager</em>, the idea is that good management doesn't require much time. Instead, small actions done consistently make the biggest difference.</p>
+    </div>
+  </section>
+
+  <!-- CORE PHILOSOPHY -->
+  <section class="mb-60">
+    <div class="section-label fade-up">
+      <h2>Core Philosophy</h2>
+    </div>
+    <div class="philosophy-block fade-up">
+      <p><strong>People who feel good produce good work.</strong></p>
+      <p><strong>Wellbeing and performance are not separate.</strong></p>
+      <p><strong>The best investment you can make is in people.</strong></p>
+    </div>
+  </section>
+
+  <!-- THE THREE PRACTICES -->
+  <section>
+    <div class="section-label fade-up">
+      <h2>The Three Practices</h2>
+    </div>
+
+    <div class="cic-tags fade-up">
+      <span class="cic-tag">Courageous</span>
+      <span class="cic-tag">Innovative</span>
+      <span class="cic-tag">Collaborative</span>
+    </div>
+
+    <div class="system-intro fade-up">
+      <div class="system-step">
+        <h4>One Minute Goals</h4>
+        <p>Clarity creates confidence</p>
+      </div>
+      <div class="system-step">
+        <h4>One Minute Praisings</h4>
+        <p>Recognition drives energy</p>
+      </div>
+      <div class="system-step">
+        <h4>One Minute Redirects</h4>
+        <p>Feedback builds growth</p>
+      </div>
+    </div>
+
+
+
+    <div class="practices-timeline">
+    <!-- PRACTICE 1 -->
+    <div class="practice-wrapper" data-step="1">
+      <div class="practice-card">
+        <div class="practice-header">
+          <div class="practice-title-group">
+            <span class="practice-badge">Practice 1</span>
+            <h3>One Minute Goals</h3>
+            <p class="practice-lead">Start the day ensuring your team knows what success looks like.</p>
+          </div>
+        </div>
+        <div class="practice-body">
+          <ul class="practice-list">
+            <li>What are the top 1–3 priorities today?</li>
+            <li>What does "done" look like?</li>
+            <li>What might block progress?</li>
+            <li>How might we do things differently?</li>
+          </ul>
+          <div class="practice-example">
+            <span class="practice-example-label">Example</span>
+            <p>"Today, the most important thing is X. If we achieve Y outcome, we're in a good place."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRACTICE 2 -->
+    <div class="practice-wrapper" data-step="2">
+      <div class="practice-card">
+        <div class="practice-header">
+          <div class="practice-title-group">
+            <span class="practice-badge">Practice 2</span>
+            <h3>One Minute Praisings</h3>
+            <p class="practice-lead">Be specific on the collaborative behaviours. Tie to impact. Make it timely.</p>
+          </div>
+        </div>
+        <div class="practice-body">
+          <div class="practice-example">
+            <span class="practice-example-label">Examples</span>
+            <ul class="example-list">
+              <li>"I noticed [specific behaviour]. That's exactly the kind of thing that [impact]. Thank you."</li>
+              <li>"Thank you for [specific behaviour]. It matters because [reason]."</li>
+              <li>"I noticed [what you did] — and I want you to know that [why it counts]."</li>
+              <li>"Thank you for trying [a new approach/ something new]."</li>
+              <li>"Thank you for raising this [e.g. risk, assumption] early."</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRACTICE 3 -->
+    <div class="practice-wrapper" data-step="3">
+      <div class="practice-card">
+        <div class="practice-header">
+          <div class="practice-title-group">
+            <span class="practice-badge">Practice 3</span>
+            <h3>One Minute Redirects</h3>
+            <p class="practice-lead">Address issues early, factually, and privately. Focus on the issue, not the intent or character.</p>
+          </div>
+        </div>
+        <div class="practice-body">
+          <div class="redirect-steps">
+            <div class="redirect-step">
+              <div class="redirect-dot"></div>
+              <div class="redirect-label">What happened</div>
+            </div>
+            <div class="redirect-connector"></div>
+            <div class="redirect-step">
+              <div class="redirect-dot"></div>
+              <div class="redirect-label">Why it matters</div>
+            </div>
+            <div class="redirect-connector"></div>
+            <div class="redirect-step">
+              <div class="redirect-dot"></div>
+              <div class="redirect-label">Pause for internalisation</div>
+            </div>
+            <div class="redirect-connector"></div>
+            <div class="redirect-step">
+              <div class="redirect-dot"></div>
+              <div class="redirect-label">What to do differently next time</div>
+            </div>
+            <div class="redirect-connector"></div>
+            <div class="redirect-step">
+              <div class="redirect-dot"></div>
+              <div class="redirect-label">Reaffirm the person</div>
+            </div>
+          </div>
+          <div class="practice-example" style="margin-top: 24px;">
+            <span class="practice-example-label">Example</span>
+            <p>"When X happened, the impact was Y. (pause for internalisation) Let's align on how we approach this moving forward."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- end practices-timeline -->
+
+  </section>
+
+  <!-- TEAM RITUALS -->
+  <section class="mb-60" style="margin-top: 60px;">
+    <div class="section-label fade-up">
+      <h2>Team Rituals</h2>
+    </div>
+    <div class="card fade-up" style="padding: 0; overflow: hidden;">
+      <div class="ritual-accordion-item">
+        <button class="ritual-trigger" onclick="toggleRitual(this)" aria-expanded="false">
+          <div class="ritual-trigger-left">
+            <span class="ritual-icon-sm">💬</span>
+            <span class="ritual-title">Growth Conversations</span>
+          </div>
+          <span class="ritual-arrow">+</span>
+        </button>
+        <div class="ritual-body">
+          <div class="ritual-body-inner">
+            <p style="color: var(--muted); font-size: 13px; margin-bottom: 14px; margin-top: -8px;">A dedicated space for professional development</p>
+            <ul class="practice-list">
+              <li>Skills to build</li>
+              <li>Opportunities to stretch</li>
+              <li>Career direction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ritual-accordion-item">
+        <button class="ritual-trigger" onclick="toggleRitual(this)" aria-expanded="false">
+          <div class="ritual-trigger-left">
+            <span class="ritual-icon-sm">🤝</span>
+            <span class="ritual-title">Connection Days</span>
+          </div>
+          <span class="ritual-arrow">+</span>
+        </button>
+        <div class="ritual-body">
+          <div class="ritual-body-inner">
+            <p style="color: var(--muted); font-size: 13px; margin-top: -8px;">Dedicate time set aside to bond, have fun, and strengthen team relationships</p>
+            <ul class="practice-list" style="margin-top: 14px;">
+              <li>Rotating share — Each member takes a turn sharing what's on their mind; an aha moment, life update, or work insight</li>
+              <li>Show & tell — Members take turns teaching the team one skill; a shortcut, recipe, cooking technique, or language phrase</li>
+              <li>After-work hangout — Casual get-togethers to wind down, bond, and build team memories</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ritual-accordion-item" style="border-bottom: none;">
+        <button class="ritual-trigger" onclick="toggleRitual(this)" aria-expanded="false">
+          <div class="ritual-trigger-left">
+            <span class="ritual-icon-sm">⏱</span>
+            <span class="ritual-title">30-min Downtime</span>
+          </div>
+          <span class="ritual-arrow">+</span>
+        </button>
+        <div class="ritual-body">
+          <div class="ritual-body-inner">
+            <p style="color: var(--muted); font-size: 13px; margin-top: -8px;">An intentional unstructured break to recharge after work</p>
+            <ul class="practice-list" style="margin-top: 14px;">
+              <li>Movement break — Step away from your desk for a brisk walk, a quick Zumba session, or light stretches</li>
+              <li>Quiet creative time — Slow down and recharge by journaling or doodling; no agenda, just you and your thoughts</li>
+              <li><a href=https://singtel.intellect.co/ target="_blank" style="color: var(--blue); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap;">Intellect app</a> — When you need a little extra support, tap into self-guided tools, coaching, or clinical care right from your phone</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+<script>
+  function toggleRitual(btn) {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.nextElementSibling.classList.remove('open');
+    } else {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.nextElementSibling.classList.add('open');
+    }
+  }
+
+  function toggleAccordion(btn) {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    const body = btn.nextElementSibling;
+
+    // Close all in same group
+    const group = btn.closest('.accordion-group');
+    group.querySelectorAll('.accordion-trigger').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
+    });
+
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      body.classList.add('open');
+    }
+  }
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.animationPlayState = 'running';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+</script>
 </body>
 </html>
