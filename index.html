@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIC Leadership Playbook</title>
+<title>CIC Playbook — V1 Blue</title>
 <link rel="preconnect" href=https://fonts.googleapis.com>
-<link href=https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap rel="stylesheet">
+<link href=https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap rel="stylesheet">
 <style>
   :root {
-    --navy: #0b1f3a;
-    --blue: #1055a8;
-    --accent: #e8c84a;
-    --light-bg: #f4f6f9;
+    --navy: #00205C;
+    --blue: #00A7E1;
+    --accent: #ffffff;
+    --light-bg: #f0f7fc;
     --white: #ffffff;
-    --text: #1a1a2e;
-    --muted: #6b7a99;
-    --border: #dce3ef;
-    --card-shadow: 0 2px 20px rgba(11, 31, 58, 0.08);
+    --text: #00205C;
+    --muted: #4a7a9b;
+    --border: #c5dff0;
+    --card-shadow: 0 2px 20px rgba(0, 32, 92, 0.08);
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     background: var(--light-bg);
     color: var(--text);
     line-height: 1.7;
@@ -43,8 +43,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(16, 85, 168, 0.5) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 90% 110%, rgba(16, 85, 168, 0.35) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 60% at 20% -10%, rgba(0, 167, 225, 0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 110%, rgba(0, 167, 225, 0.35) 0%, transparent 60%);
   }
 
   header::after {
@@ -62,8 +62,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(232, 200, 74, 0.15);
-    border: 1px solid rgba(232, 200, 74, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--accent);
     font-size: 11px;
     font-weight: 500;
@@ -75,7 +75,7 @@
   }
 
   header h1 {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: clamp(28px, 4.5vw, 46px);
     font-weight: 700;
     color: var(--white);
@@ -84,7 +84,7 @@
     letter-spacing: -0.01em;
   }
 
-  header h1 span { color: var(--accent); }
+  header h1 span { color: #00E3F4; }
 
   header p {
     font-size: 14px;
@@ -107,7 +107,7 @@
   }
 
   .section-label h2 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 26px;
     font-weight: 700;
     color: var(--navy);
@@ -130,7 +130,7 @@
     border: 1px solid rgba(220, 227, 239, 0.6);
   }
 
-  .card p { color: #3d4a66; font-size: 15px; }
+  .card p { color: #1a3a5c; font-size: 15px; }
   .card p + p { margin-top: 12px; }
 
   /* ── PHILOSOPHY CALLOUT ── */
@@ -150,7 +150,7 @@
   }
 
   .philosophy-block p {
-    color: #3d4a66;
+    color: #1a3a5c;
     font-size: 15px;
     font-weight: 700;
     line-height: 1.75;
@@ -171,7 +171,7 @@
     box-shadow: var(--card-shadow);
     border-left: 4px solid var(--accent);
     font-size: 15px;
-    color: #3d4a66;
+    color: #1a3a5c;
   }
 
   /* ── CIC TAGS ── */
@@ -184,13 +184,13 @@
 
   .cic-tag {
     display: inline-block;
-    background: #e8eef7;
-    color: #2d3f5e;
+    background: #ddf0fa;
+    color: #00205C;
     font-size: 13px;
     font-weight: 500;
     padding: 6px 16px;
     border-radius: 100px;
-    border: 1px solid #c8d5e8;
+    border: 1px solid #99d3ef;
   }
 
   /* ── SYSTEM INTRO ── */
@@ -214,7 +214,7 @@
 
   .system-step:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(11, 31, 58, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 32, 92, 0.12);
   }
 
   .system-step::after {
@@ -237,14 +237,14 @@
     color: var(--accent);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 0 auto 14px;
   }
 
   .system-step h4 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
     color: var(--navy);
     margin-bottom: 6px;
@@ -262,7 +262,7 @@
     padding: 16px 20px;
     font-size: 14px;
     color: var(--blue);
-    border: 1px solid rgba(16, 85, 168, 0.12);
+    border: 1px solid rgba(0, 167, 225, 0.12);
     margin-bottom: 40px;
     text-align: center;
   }
@@ -290,7 +290,7 @@
   }
 
   .practice-card:hover {
-    box-shadow: 0 8px 32px rgba(11, 31, 58, 0.11);
+    box-shadow: 0 8px 32px rgba(0, 32, 92, 0.11);
     transform: translateY(-2px);
   }
 
@@ -307,7 +307,7 @@
     background: var(--navy);
     border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     font-weight: 700;
     color: var(--accent);
@@ -317,7 +317,7 @@
 
   .practice-badge {
     display: inline-block;
-    background: rgba(16, 85, 168, 0.08);
+    background: rgba(0, 167, 225, 0.08);
     color: var(--blue);
     font-size: 11px;
     font-weight: 500;
@@ -329,7 +329,7 @@
   }
 
   .practice-title-group h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     font-weight: 700;
     color: var(--navy);
@@ -361,7 +361,7 @@
     align-items: flex-start;
     gap: 12px;
     font-size: 15px;
-    color: #3d4a66;
+    color: #1a3a5c;
     line-height: 1.6;
   }
 
@@ -377,7 +377,7 @@
 
   .practice-example {
     margin-top: 20px;
-    background: #f1f5fb;
+    background: #e5f5fc;
     border-left: 3px solid var(--blue);
     border-radius: 6px;
     padding: 14px 18px;
@@ -395,7 +395,7 @@
 
   .practice-example p {
     font-size: 16px;
-    color: #3d4a66;
+    color: #1a3a5c;
     font-style: italic;
     line-height: 1.6;
     margin: 0;
@@ -412,11 +412,11 @@
 
   .example-list li {
     font-size: 16px;
-    color: #3d4a66;
+    color: #1a3a5c;
     font-style: italic;
     line-height: 1.6;
     padding-left: 14px;
-    border-left: 2px solid rgba(16, 85, 168, 0.2);
+    border-left: 2px solid rgba(0, 167, 225, 0.2);
   }
 
   /* ── REDIRECT STEPS ── */
@@ -484,7 +484,7 @@
     transition: background 0.15s ease;
   }
 
-  .accordion-trigger:hover { background: rgba(11, 31, 58, 0.02); }
+  .accordion-trigger:hover { background: rgba(0, 32, 92, 0.02); }
 
   .accordion-trigger span:first-child {
     font-size: 14px;
@@ -525,7 +525,7 @@
   .accordion-body-inner {
     padding: 4px 32px 24px;
     font-size: 14px;
-    color: #3d4a66;
+    color: #1a3a5c;
     line-height: 1.75;
   }
 
@@ -545,7 +545,7 @@
     gap: 14px;
     padding: 22px 28px;
     margin: 20px 0;
-    background: linear-gradient(to right, rgba(16, 85, 168, 0.06), rgba(16, 85, 168, 0.02));
+    background: linear-gradient(to right, rgba(0, 167, 225, 0.06), rgba(0, 167, 225, 0.02));
     border-radius: 12px;
     border-left: 3px solid var(--blue);
   }
@@ -582,13 +582,13 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 80% at 50% 0%, rgba(16, 85, 168, 0.5) 0%, transparent 65%);
+    background: radial-gradient(ellipse 70% 80% at 50% 0%, rgba(0, 167, 225, 0.5) 0%, transparent 65%);
   }
 
   .cta-card > * { position: relative; z-index: 1; }
 
   .cta-card h2 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 30px;
     color: var(--white);
     margin-bottom: 16px;
@@ -622,8 +622,8 @@
   }
 
   .cta-pill:hover {
-    background: rgba(232, 200, 74, 0.15);
-    border-color: rgba(232, 200, 74, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
     color: var(--accent);
   }
 
@@ -645,7 +645,7 @@
     transition: background 0.15s ease;
   }
 
-  .ritual-trigger:hover { background: rgba(11, 31, 58, 0.02); }
+  .ritual-trigger:hover { background: rgba(0, 32, 92, 0.02); }
 
   .ritual-trigger-left {
     display: flex;
@@ -699,7 +699,7 @@
   .ritual-body-inner {
     padding: 4px 28px 24px 62px;
     font-size: 14px;
-    color: #3d4a66;
+    color: #1a3a5c;
     line-height: 1.75;
   }
 
@@ -795,8 +795,6 @@
         <p>Feedback builds growth</p>
       </div>
     </div>
-
-
 
     <div class="practices-timeline">
     <!-- PRACTICE 1 -->
@@ -963,7 +961,9 @@
       </div>
     </div>
   </section>
-	
+
+</main>
+
 <script>
   function toggleRitual(btn) {
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
@@ -980,7 +980,6 @@
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
     const body = btn.nextElementSibling;
 
-    // Close all in same group
     const group = btn.closest('.accordion-group');
     group.querySelectorAll('.accordion-trigger').forEach(b => {
       b.setAttribute('aria-expanded', 'false');
@@ -993,7 +992,6 @@
     }
   }
 
-  // Intersection Observer for fade-in
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
